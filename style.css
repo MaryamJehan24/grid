@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f5;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #205c4a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* Navigation bar */
+
+nav {
+    background-color: #173f34;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #ffd27d;
+}
+
+/* Introduction */
+
+.intro {
+    text-align: center;
+    padding: 35px 15px;
+}
+
+.intro h2 {
+    color: #205c4a;
+    margin-bottom: 10px;
+}
+
+/* CSS GRID CONTAINER */
+
+.grid-container {
+    display: grid;
+
+    /* Creates three equal columns */
+    grid-template-columns: 1fr 1fr 1fr;
+
+    /* Creates rows with minimum and maximum sizes */
+    grid-auto-rows: minmax(220px, auto);
+
+    /* Space between rows and columns */
+    gap: 20px;
+
+    /* Space around the grid */
+    padding: 25px;
+
+    /* Aligns items inside their grid areas */
+    align-items: stretch;
+}
+
+/* Grid items */
+
+.item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #cccccc;
+}
+
+.item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.item h3 {
+    text-align: center;
+    padding: 15px;
+    color: #205c4a;
+}
+
+/* Grid column and row positioning */
+
+.item1 {
+    grid-column: 1 / 3;
+}
+
+.item2 {
+    grid-column: 3 / 4;
+}
+
+.item3 {
+    grid-row: span 1;
+}
+
+.item4 {
+    grid-row: span 1;
+}
+
+/* Hover effect */
+
+.item:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Footer */
+
+footer {
+    background-color: #173f34;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Responsive Grid for tablets */
+
+@media screen and (max-width: 800px) {
+
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .item1 {
+        grid-column: span 2;
+    }
+
+    .item2 {
+        grid-column: span 1;
+    }
+}
+
+/* Responsive Grid for mobile phones */
+
+@media screen and (max-width: 500px) {
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .item1,
+    .item2 {
+        grid-column: auto;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+}
+```
